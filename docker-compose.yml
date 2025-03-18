@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - USE_GPT_ONLY=${USE_GPT_ONLY}
+      - DEFAULT_VOICE=${DEFAULT_VOICE}
