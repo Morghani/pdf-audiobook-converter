@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF to Audio</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+</head>
+<body>
+    <h1>Upload a PDF to Convert to Audio</h1>
+    <form id="pdfForm">
+        <input type="file" name="file" id="fileInput" accept=".pdf" required>
+        <button type="submit">Upload</button>
+    </form>
+    <div id="audioPlayer"></div>
+    <div id="stats" style="margin-top: 20px;"></div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
