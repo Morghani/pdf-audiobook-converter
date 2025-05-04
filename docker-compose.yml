@@ -1,11 +1,14 @@
-version: '3.8'
+version: '3.9'
 
 services:
-  web:
+  pdf-audio-app:
     build: .
+    container_name: pdf-audio-app
     ports:
       - "8000:8000"
     volumes:
       - .:/app
+      - ./generated:/app/generated
     env_file:
       - .env
+    restart: unless-stopped
